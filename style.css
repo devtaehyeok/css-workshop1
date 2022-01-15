@@ -23,8 +23,8 @@ html {
 
 :root {
   --primary-color: hsl(160deg, 100%, 30%);
-  --secondaryt-color-light: hsl(45deg, 100%, 50%);
-  --secondaryt-color-dark: hsl(45deg, 100%, 40%);
+  --secondary-color-light: hsl(45deg, 100%, 50%);
+  --secondary-color-dark: hsl(45deg, 100%, 40%);
   --gray-medium: hsl(0deg, 0%, 40%);
   --gray-light: hsl(0deg, 0%, 60%);
 }
@@ -36,10 +36,11 @@ html {
   /** 좌우 크기 줄일 때 간격 주기**/
   padding: 0 24px;
 }
-/** 900px 중 컬럼과 같은 효과*/
+
 .intro-chunk {
   /** 아래 위 패딩 약간 다르게*/
   padding: 96px 0 48px;
+  /** 900px 중 400px / 500px 컬럼과 같은 효과*/
   max-width: 400px;
 }
 .intro-chunk p {
@@ -57,7 +58,7 @@ header {
   border-bottom: 8px solid var(--gray-medium);
 }
 main {
-  background-color: hsl(0deg, 0%, 60%);
+  background-color: var(--gray-light);
   padding: 96px 0;
 }
 .card {
@@ -69,14 +70,15 @@ main {
   border-bottom: 8px solid var(--gray-medium);
 }
 .indented-heading {
-  background: hsl(45deg, 100%, 50%);
+  background: var(--secondary-color-light);
+  padding: 16px 32px;
+  /** 패딩과 indent 맞추기 위해 */
   margin-left: -32px;
   margin-top: -16px;
-  padding: 16px 32px;
   /** 상위 요소의 크기 이하면 max-content
   그렇지 않으면 width:auto처럼 작동함. */
   width: fit-content;
-  border-bottom: 8px solid hsl(45deg, 100%, 40%);
+  border-bottom: 8px solid var(--secondary-color-dark);
 }
 
 .card p {
