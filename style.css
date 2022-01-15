@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add styles here! */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+html {
+  /** 기본 크기 16px*/
+  font-size: 18px;
+}
+
+:root {
+  --primary-color: hsl(160deg, 100%, 30%);
+  --secondaryt-color-light: hsl(45deg, 100%, 50%);
+  --secondaryt-color-dark: hsl(45deg, 100%, 40%);
+  --gray-medium: hsl(0deg, 0%, 40%);
+  --gray-light: hsl(0deg, 0%, 60%);
+}
+
+/** 좌우 최대 너비 중앙 정렬 위해 사용**/
+.max-width-wrapper {
+  width: 900px;
+  margin: 0 auto;
+  /** 좌우 크기 줄일 때 간격 주기**/
+  padding: 0 24px;
+}
+/** 900px 중 컬럼과 같은 효과*/
+.intro-chunk {
+  /** 아래 위 패딩 약간 다르게*/
+  padding: 96px 0 48px;
+  max-width: 400px;
+}
+.intro-chunk p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.intro-chunk strong {
+  color: var(--primary-color);
+}
+.intro-chunk .title {
+  font-size: 2rem;
+  margin-bottom: 48px;
+}
+header {
+  border-bottom: 8px solid var(--gray-medium);
+}
+main {
+  background-color: hsl(0deg, 0%, 60%);
+  padding: 96px 0;
+}
+.card {
+  background-color: white;
+  /** max-width-wrapper 만큼 패딩을 더해주면 컨텐츠 영역이 축소됨. */
+  padding: 24px;
+  /** 패딩에 의해 축소된 만큼 복원 */
+  margin: -24px;
+  border-bottom: 8px solid var(--gray-medium);
+}
+.indented-heading {
+  background: hsl(45deg, 100%, 50%);
+  margin-left: -32px;
+  margin-top: -16px;
+  padding: 16px 32px;
+  /** 상위 요소의 크기 이하면 max-content
+  그렇지 않으면 width:auto처럼 작동함. */
+  width: fit-content;
+  border-bottom: 8px solid hsl(45deg, 100%, 40%);
+}
+
+.card p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+/** 마지막 p 아래 마진 작게 하기 위함.*/
+.card p:last-child {
+  margin-bottom: 0;
+}
